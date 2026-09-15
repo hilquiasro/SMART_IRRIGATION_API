@@ -1,0 +1,5 @@
+error_type,records,mean_absolute_depth_error,mean_depth_error
+false_negative,533,4.167647126082193,-4.167647126082193
+false_positive,590,4.325427040567803,4.325427040567803
+true_negative,118617,0.0,0.0
+true_positive,2900,0.1698362702623743,-0.022058896982191354

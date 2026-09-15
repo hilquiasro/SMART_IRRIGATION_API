@@ -1,2 +1,0 @@
-classifier,regressor,overall_mae,overall_rmse,overall_r2,event_mae,event_rmse,event_r2,classification_precision,classification_recall,classification_f1,real_events,predicted_events
-random_forest,gradient_boosting,0.1595171222192191,0.9116791932271601,-0.10006301862263323,1.8208270805831157,2.7733944342731944,-1.8483640220233064,0.4492753623188406,0.7828282828282829,0.570902394106814,198,345

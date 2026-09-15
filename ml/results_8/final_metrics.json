@@ -1,0 +1,49 @@
+{
+    "dataset": "irrigation_dataset_3.csv",
+    "training_period": "2020-2023",
+    "validation_period": "2024",
+    "test_period": "2025",
+    "best_classifier": "mlp",
+    "classification_threshold": 0.43000000000000005,
+    "classification_test": {
+        "accuracy": 0.9908431180691455,
+        "precision": 0.830945558739255,
+        "recall": 0.8447422079813575,
+        "f1": 0.8377870865231836,
+        "roc_auc": 0.9974736365336841
+    },
+    "best_regressor": "extra_trees",
+    "regression_test": {
+        "mae_mm": 0.16560457715225207,
+        "rmse_mm": 0.22051860538717521,
+        "r2": 0.5177612880948237
+    },
+    "end_to_end_test": {
+        "mae_mm": 0.042937728766289124,
+        "rmse_mm": 0.4085889834233391,
+        "r2": 0.6872540967963652,
+        "real_water_mm": 15165.533374453731,
+        "predicted_water_mm": 15432.208608938572,
+        "difference_water_mm": 266.675234484841,
+        "difference_water_percent": 1.7584296437212958,
+        "real_events": 3433,
+        "predicted_events": 3490
+    },
+    "feature_policy": {
+        "target_excluded": true,
+        "storage_before_irrigation_excluded": true,
+        "storage_after_irrigation_excluded": true,
+        "dynamic_lower_bound_excluded": true,
+        "scenario_id_excluded": true,
+        "storage_capacity_excluded": true,
+        "future_features_used": false
+    },
+    "notes": [
+        "Dataset 3 was kept unchanged.",
+        "The temporal split was preserved.",
+        "GradientBoosting tradicional was replaced by HistGradientBoosting.",
+        "The positive class was handled with class weights only in classifiers.",
+        "Regression models were trained only on positive irrigation events.",
+        "The 2025 test set was not used for model selection."
+    ]
+}
