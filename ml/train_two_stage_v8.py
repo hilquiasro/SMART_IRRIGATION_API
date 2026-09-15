@@ -1266,46 +1266,37 @@ with open(
 # SALVAR MODELOS
 # ============================================================
 
+MODELS_DIR = BASE_DIR / "models" / "model_v8"
+
+MODELS_DIR.mkdir(
+    parents=True,
+    exist_ok=True,
+)
+
+joblib.dump(
+    best_classifier,
+    MODELS_DIR / f"classifier_{best_classifier_name}.joblib",
+)
+
+joblib.dump(
+    best_regressor,
+    MODELS_DIR / f"regressor_{best_regressor_name}.joblib",
+)
+
 print()
 print("=" * 78)
-print("SALVANDO MODELOS")
+print("MODELOS FINAIS SALVOS")
 print("=" * 78)
 
-for name, model in classifier_objects.items():
+print(
+    f"Classificador: "
+    f"classifier_{best_classifier_name}.joblib"
+)
 
-    output_path = (
-        MODELS_DIR /
-        f"classifier_{name}.joblib"
-    )
-
-    joblib.dump(
-        model,
-        output_path,
-    )
-
-    print(
-        f"Classificador salvo: "
-        f"{output_path.name}"
-    )
-
-
-for name, model in regressor_objects.items():
-
-    output_path = (
-        MODELS_DIR /
-        f"regressor_{name}.joblib"
-    )
-
-    joblib.dump(
-        model,
-        output_path,
-    )
-
-    print(
-        f"Regressor salvo: "
-        f"{output_path.name}"
-    )
-
+print(
+    f"Regressor: "
+    f"regressor_{best_regressor_name}.joblib"
+)
 
 # ============================================================
 # FINAL

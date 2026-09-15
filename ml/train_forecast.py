@@ -1,5 +1,6 @@
 from pathlib import Path
 
+import joblib
 import numpy as np
 import pandas as pd
 
@@ -1445,6 +1446,19 @@ with open(
         ensure_ascii=False
     )
 
+
+MODELS_DIR = BASE_DIR / "ml" / "models" / "model_forecast"
+MODELS_DIR.mkdir(parents=True, exist_ok=True)
+
+joblib.dump(
+    best_classifier,
+    MODELS_DIR / "classifier_random_forest.joblib"
+)
+
+joblib.dump(
+    best_regressor,
+    MODELS_DIR / "regressor_extra_trees.joblib"
+)
 
 # ============================================================
 # ARQUIVOS SALVOS

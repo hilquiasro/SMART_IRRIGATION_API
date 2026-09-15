@@ -3,6 +3,5 @@ venv/
 __pycache__/
 *.pyc
 ml/data/*.csv
-ml/models_8/*.joblib
 ml/models/*.joblib
-ml/models_forecast/*.joblib
+ml/models/**/*.joblib
