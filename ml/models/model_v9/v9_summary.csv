@@ -1,0 +1,2 @@
+classifier,classifier_threshold,test_precision,test_recall,test_f1,test_roc_auc,test_pr_auc,regressor,test_mae_mm,test_rmse_mm,test_r2,end_to_end_mae_mm,end_to_end_rmse_mm,end_to_end_r2
+random_forest_depth_None,0.25000000000000006,0.9998008761449622,1.0,0.9999004281589167,0.9999999966012763,0.9999999206835869,catboost_depth_7_lr_0.1,0.15700491433342117,0.23030091120057497,0.9711511961971838,0.0064602433069611866,0.04681537190002789,0.9956346435605686
